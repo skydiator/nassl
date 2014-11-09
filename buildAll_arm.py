@@ -8,7 +8,8 @@ import os
 NASSL_INSTALL_DIR = ''
 
 # I've only tried building nassl on OS X 64 bits and Linux 32/64 bits
-# This will fail if you're cross-compiling
+# Cross compile only work for ARM architecture.
+
 if architecture()[0] == '64bit':
     if platform == 'darwin':
         OPENSSL_TARGET = 'darwin64-x86_64-cc'
